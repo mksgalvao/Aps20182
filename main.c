@@ -26,7 +26,7 @@ void mostrarVetor(int *vetor, int tam)
 
 }
 
-int swap(int *arr, int i, int j)
+int trocas(int *arr, int i, int j)
 {
     int troca = 0;
     int temp = arr[i];
@@ -49,7 +49,7 @@ int bolha(int *vetor, int tam)
 
     for (int i=0; i<tam-1; i++)
         if (vetor[i] > vetor[i+1])
-            troca +=  swap(vetor, i, i+1);
+            troca +=  trocas(vetor, i, i+1);
 
     bolha(vetor, tam-1);
 
@@ -76,7 +76,7 @@ int selecao(int *vetor, int i, int tam, int troca)
     }
 
     // swap the minimum element in subarray[i..n-1] with arr[i]
-      troca += swap(vetor, min, i);
+      troca += trocas(vetor, min, i);
 }
     if (i + 1 < tam)
     {
