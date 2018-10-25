@@ -43,14 +43,12 @@ int bolha(int *vetor, int tam)
 {
     int troca = 0;
     // Base case
+
     if (tam == 1)
-
         return 0;
-
     for (int i=0; i<tam-1; i++)
         if (vetor[i] > vetor[i+1])
             troca +=  trocas(vetor, i, i+1);
-
     bolha(vetor, tam-1);
 
     return troca;
@@ -61,6 +59,7 @@ int bolha(int *vetor, int tam)
 // Recursive function to perform selection sort on subarray arr[i..n-1]
 int selecao(int *vetor, int i, int tam, int troca)
 {
+	int i;int j
 
    for (int i = 0; i < tam - 1; i++)
     {
