@@ -128,7 +128,7 @@ int main()
 
     int* vetor;
     int inicio, fim, tempo, tempo1, troca;
-    troca =0;
+    troca = 0;
     int opc, tam;
 
 
