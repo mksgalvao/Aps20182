@@ -75,7 +75,7 @@ int bublle(int *vetor, int tam, int troca){
     }
     for (int i=0; i<tam-1; i++)
         if (vetor[i] > vetor[i+1])
-            troca +=  swap(vetor, i, i+1, troca);
+            troca  += swap(vetor, i, i+1, troca);
 
     troca += bublle(vetor, tam-1, troca);
 
@@ -158,7 +158,7 @@ int quick(int *vetor, int inicio, int fim, int troca){
 
     int* vetor;
     int inicio = 0, fim = 0, tempo = 0, tempo1 = 0;
-    int troca;
+    int troca = 0;
     int opc, tam;
     FILE *relatorio;
     char metodo[20];
