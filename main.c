@@ -20,7 +20,7 @@ void mostrarVetor(int*vetor, int tam){
 
     for(i = 0; i < tam; i++)
     {
-        printf("%i\t", vetor[i]);
+        printf("%d\t", vetor[i]);
     }
     printf("\n");
 }
@@ -52,57 +52,69 @@ fclose(relatorio);
 
 }
 //Swap ("Troca") é uma função que troca posições no vetor
-int swap(int *arr, int i, int j){
+int swap(int *arr, int i, int j, int troca){
 
-    int troca = 0;
+    troca =0;
+    if(i!=j){
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
 
     troca++;
-
+    }
     return troca;
 }
 //Função Bublle Sort
-int bublle(int *vetor, int tam){
+int bublle(int *vetor, int tam, int troca){
 
-	int troca = 0;
+	troca = 0;
 
-    if (tam == 1)
+    if (tam == 1){
 
-        return 0;
-
+        return 0; // caso base
+    }
     for (int i=0; i<tam-1; i++)
         if (vetor[i] > vetor[i+1])
-            troca +=  swap(vetor, i, i+1);
+            troca +=  swap(vetor, i, i+1, troca);
 
-    bublle(vetor, tam-1);
+    troca += bublle(vetor, tam-1, troca);
 
     return troca;
 }
-// Função recursiva para executar o Selection Sort no subarray arr[i...n-1]
-int selection(int *vetor, int i, int tam, int troca){
+
+int selectionSort(int *vetor, int i, int tam, int troca){
+
+    troca = 0;
+    if(tam == 1){
+        return 0; // caso base, vetor de 1 so elemento
+    }
 
    for (int i = 0; i < tam - 1; i++)
     {	// Encontra o elemento mínimo no subarray não classificada [i..n-1]
-        int min = i; //Swap ("Troca") com o arr[i]
+        int min = i;
+         //Swap ("Troca") com o arr[i]
 
     for (int j = i + 1; j < tam; j++)
     {
 
         if (vetor[j] < vetor[min]) //Se arr[j] é menor elemento, então é o novo mínimo
             min = j;    // Atualiza o menor elemento do index
+
     }
 	// Swap ("troca") o minimo de elementos em uma subarray [i...n-1]
-      troca += swap(vetor, min, i);
+      troca += swap(vetor, min, i, troca);
+
 }
     if (i + 1 < tam)
     {
-        troca = selection(vetor, i + 1, tam, troca);
+         troca += selectionSort(vetor, i + 1, tam, troca);
+
     }
 
     return troca;
 }
+
+
 //Função Quick Sort
 int quick(int *vetor, int inicio, int fim, int troca){
 
@@ -140,10 +152,13 @@ int quick(int *vetor, int inicio, int fim, int troca){
 	return troca;
 	}
 
+
+ // função principall
    int main(){
 
     int* vetor;
-    int inicio, fim, tempo, tempo1, troca = 0;
+    int inicio = 0, fim = 0, tempo = 0, tempo1 = 0;
+    int troca;
     int opc, tam;
     FILE *relatorio;
     char metodo[20];
@@ -179,12 +194,16 @@ int quick(int *vetor, int inicio, int fim, int troca){
 
 	case 0:
 
-                printf("Fim do programa, clique em qualquer tecla para sair");
+                printf("\n \t Relatorio criado com sucesso!!\t \n");
+                printf("\n \t Lembre-se de analisa-lo no diretorio do arquivo!\n\t");
+                printf("\n Obrigado pela antencao <3\n");
+                printf(" ## Fim do programa ## ");
+                system("pause");
                 break;
 	case 1 : //Caso seja selecionado opção 1 será executado o método Bublle Sort
 		system("cls");
         inicio = GetTickCount();
-        troca = bublle(vetor, tam);
+        troca = bublle(vetor, tam, troca);
         fim = GetTickCount();
         tempo = fim - inicio;
         tempo1 = tempo/1000;
@@ -203,7 +222,7 @@ int quick(int *vetor, int inicio, int fim, int troca){
         inicio = 0;
         troca = 0;
         inicio = GetTickCount();
-        troca = selection(vetor,0, tam, troca);
+        troca = selectionSort(vetor,0, tam,troca);
         fim = GetTickCount();
         tempo = fim - inicio;
         tempo1 = tempo/1000;
