@@ -59,7 +59,6 @@ int swap(int *arr, int i, int j, int troca){
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
-
     troca++;
     }
     return troca;
@@ -73,6 +72,7 @@ int bublle(int *vetor, int tam, int troca){
 
         return 0; // caso base
     }
+
     for (int i=0; i<tam-1; i++)
         if (vetor[i] > vetor[i+1])
             troca  += swap(vetor, i, i+1, troca);
@@ -179,6 +179,11 @@ int quick(int *vetor, int inicio, int fim, int troca){
     printf(" Vamos testar qual metedo de ordenacao eh mais rapido!\n");
     printf(" Digite o tamanho do vetor que deseja ordenar: ");
     scanf("%d", &tam);
+    while (tam > 30000){
+        printf("Digite um vetor menor ou igual a 30000\n");
+    scanf("%d", &tam);
+
+    }
     vetor = (int *)malloc(tam * sizeof(int));
     prencherVetor(vetor, tam);
     printf("\n Este eh o vetor sem ordenar:\n\n");

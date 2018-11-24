@@ -6,3 +6,75 @@ Para um vetor de 10000 posicoes e ordenado pelo metodo Buble Sort temos:
 
  Numero de trocas sao: 24935268 
 
+
+Para um vetor de 20000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 2969 milisegundos 
+
+ Tempo de ordenacao em segundos: 2 segundos 
+
+ Numero de trocas sao: 99019635 
+
+
+Para um vetor de 20000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 3437 milisegundos 
+
+ Tempo de ordenacao em segundos: 3 segundos 
+
+ Numero de trocas sao: 99019635 
+
+
+Para um vetor de 30000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 7641 milisegundos 
+
+ Tempo de ordenacao em segundos: 7 segundos 
+
+ Numero de trocas sao: 224096523 
+
+
+Para um vetor de 40000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 11250 milisegundos 
+
+ Tempo de ordenacao em segundos: 11 segundos 
+
+ Numero de trocas sao: 395572351 
+
+
+Para um vetor de 42000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 12516 milisegundos 
+
+ Tempo de ordenacao em segundos: 12 segundos 
+
+ Numero de trocas sao: 436981129 
+
+
+Para um vetor de 43000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 13109 milisegundos 
+
+ Tempo de ordenacao em segundos: 13 segundos 
+
+ Numero de trocas sao: 458551820 
+
+
+Para um vetor de 30000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 6266 milisegundos 
+
+ Tempo de ordenacao em segundos: 6 segundos 
+
+ Numero de trocas sao: 222594132 
+
+
+Para um vetor de 30000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 6297 milisegundos 
+
+ Tempo de ordenacao em segundos: 6 segundos 
+
+ Numero de trocas sao: 222594132 
+
+
+Para um vetor de 30000 posicoes e ordenado pelo metodo Buble Sort temos:
+ Tempo de ordenacao em milesegundos: 6297 milisegundos 
+
+ Tempo de ordenacao em segundos: 6 segundos 
+
+ Numero de trocas sao: 222594132 
+
